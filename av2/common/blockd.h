@@ -1041,7 +1041,7 @@ static INLINE int is_global_mv_block(const MB_MODE_INFO *const mbmi,
 }
 
 static INLINE int is_partition_point(BLOCK_SIZE bsize) {
-  return bsize != BLOCK_4X4 && bsize < BLOCK_SIZES;
+  return bsize != BLOCK_4X4 && bsize <= BLOCK_256X256;
 }
 
 // For a block size 'bsize', returns the size of the sub-blocks used by the
